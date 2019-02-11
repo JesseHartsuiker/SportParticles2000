@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>particles.js</title>
+    <meta name="description" content="particles.js is a lightweight JavaScript library for creating particles.">
+    <meta name="author" content="Vincent Garreau"/>
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" media="screen" href="css/style.css">
+</head>
+<body>
+
+
+<!-- count particles -->
+<!--<div class="count-particles">-->
+<!--<span class="js-count-particles">&#45;&#45;</span> particles-->
+<!--</div>-->
+
+<!-- particles.js container -->
+<section>
+    <div id="particles-js"></div>
+    <img src="Fish Site/Xbox logo.png" class="game game1">
+    <img src="Fish Site/Playstation logo.png" class="game game2">
+    <img src="Fish Site/Pc logo.png" class="game game3">
+    <img src="Fish Site/Nintendo logo.png" class="game game4">
+    <img src="" class="game game5">
+    <img src="" class="game game6">
+</section>
+
+<div id="middenkolom">
+    <div id="menu">
+        <ul>
+            <li><a href="#" class="">Home</a></li>
+            <li><a href="#">Device</a></li>
+            <li><a href="#">Products</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Help</a></li>
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+            <li><a href="#">Login</a></li>
+            <li><a href="#">Sign Up</a></li>
+        </ul>
+
+    </div>
+    <header>
+        <img src="Fish%20Site/logo-school-site.png">
+    </header>
+    <select>
+        <option value="Xbox">Xbox</option>
+        <option value="Playsation">Playstation</option>
+        <option value="PC">Pc</option>
+        <option value="Nintendo">Nintendo</option>
+    </select>
+    <select>
+        <option value="Player 1">Player 1</option>
+        <option value="Player 2">Player 2</option>
+        <option value="Player 3">Player 3</option>
+        <option value="Player 4">Player 4</option>
+        <option value="Player 5">Player 5</option>
+        <option value="Player 6">Player 6</option>
+    </select>
+    <br>
+
+    <div class="block1">
+        <div class="left1">
+            <video width="360" height="250" controls>
+                <source src="Fish%20Site/Battlefield™%20V.mp4" type="video/mp4">
+            </video>
+        </div>
+        <div class="right1">
+            <h1>ZIEKE MAN</h1>
+        </div>
+    </div>
+    <br>
+    <div class="block2">
+        <div class="left2">
+            <video width="360" height="250" controls>
+                <source src="Fish%20Site/Batman™%20Arkham%20Knight.mp4" type="video/mp4">
+            </video>
+        </div>
+        <div class="right2">
+            <h1>ZIEKE MENSEN</h1>
+        </div>
+    </div>
+
+
+</div>
+
+
+<!-- scripts -->
+<script src="particles.js"></script>
+<script src="js/app.js"></script>
+
+<!-- stats.js -->
+<script src="js/lib/stats.js"></script>
+<script>
+    var count_particles, stats, update;
+    stats = new Stats;
+    stats.setMode(0);
+    stats.domElement.style.position = 'absolute';
+    stats.domElement.style.left = '0px';
+    stats.domElement.style.top = '0px';
+    document.body.appendChild(stats.domElement);
+    count_particles = document.querySelector('.js-count-particles');
+    update = function () {
+        stats.begin();
+        stats.end();
+        if (window.pJSDom[0].pJS.particles && window.pJSDom[0].pJS.particles.array) {
+            count_particles.innerText = window.pJSDom[0].pJS.particles.array.length;
+        }
+        requestAnimationFrame(update);
+    };
+    requestAnimationFrame(update);
+</script>
+<script>
+    document.getElementById("stats").style.display = 'none';
+</script>
+
+</body>
+</html>

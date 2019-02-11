@@ -1,0 +1,306 @@
+/* =============================================================================
+   HTML5 CSS Reset Minified - Jesse Hartsuiker
+   ========================================================================== */
+
+html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,abbr,address,cite,code,del,dfn,em,img,ins,kbd,q,samp,small,strong,sub,sup,var,b,i,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}
+body{line-height:1}
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}
+nav ul{list-style:none}
+blockquote,q{quotes:none}
+blockquote:before,blockquote:after,q:before,q:after{content:none}
+a{margin:0;padding:0;font-size:100%;vertical-align:baseline;background:transparent;text-decoration:none}
+mark{background-color:#ff9;color:#000;font-style:italic;font-weight:bold}
+del{text-decoration:line-through}
+abbr[title],dfn[title]{border-bottom:1px dotted;cursor:help}
+table{border-collapse:collapse;border-spacing:0}
+hr{display:block;height:1px;border:0;border-top:1px solid #ccc;margin:1em 0;padding:0}
+input,select{vertical-align:middle}
+li{list-style:none}
+
+
+/* =============================================================================
+   My CSS
+   ========================================================================== */
+
+/* ---- base ---- */
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html,body{
+	width:100%;
+	height:100%;
+	background:#111;
+}
+
+html{
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+body{
+  font:normal 75% Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+section
+{
+  height: fit-content;
+}
+
+canvas{
+  display:block;
+  vertical-align:bottom;
+}
+
+
+/* ---- stats.js ---- */
+
+.count-particles{
+  background: red;
+  position: absolute;
+  top: 48px;
+  left: 0;
+  width: 80px;
+  color: #13E8E9;
+  font-size: .8em;
+  text-align: left;
+  text-indent: 4px;
+  line-height: 14px;
+  padding-bottom: 2px;
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight: bold;
+}
+
+.js-count-particles{
+  font-size: 1.1em;
+}
+
+#stats,
+.count-particles{
+  -webkit-user-select: none;
+  margin-top: 5px;
+  margin-left: 5px;
+}
+
+#stats{
+  border-radius: 3px 3px 0 0;
+  overflow: hidden;
+}
+
+.count-particles{
+  border-radius: 0 0 3px 3px;
+}
+#gamemain{
+    top:0;
+    padding-left: 25px;
+    padding-right: 25px;
+    height:3em;
+    margin:0;
+    padding:0 10px;
+    background:#333;
+    color:white;
+    box-shadow:0 -1px rgba(0,0,0,.5) inset;
+}
+
+
+/* ---- particles.js container ---- */
+
+#particles-js{
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to top, #262626, #ff9900, #262626);
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+}
+.game
+{
+  position: absolute;
+}
+.game1
+{
+  top: 30%;
+  height: 120px;
+  animation: animate 10s linear infinite;
+}
+.game2{
+  top: 40%;
+  height: 200px;
+  animation: animate 25s linear infinite;
+}
+.game3{
+    top: 60%;
+    height: 100px;
+    animation: animate2 20s linear infinite;
+  }
+.game4{
+  top: 80%;
+  height: 150px;
+  animation: animate 30s linear infinite;
+
+
+}
+.game5{
+  top: 20%;
+  height: 120px;
+  animation: animate2 20s linear infinite;
+opacity: .5;
+}
+.game6{
+  top: 10%;
+  height: 100px;
+  animation: animate 13s linear infinite;
+}
+@keyframes animate {
+  0% {
+    transform: translateY(-50px);
+    left: -25%;
+  }
+  25% {
+    transform: translateY(-0px);
+  }
+  50% {
+    transform: translateY(50px);
+  }
+  75% {
+    transform: translateY(0px);
+  }
+  100% {
+    transform: translateY(-50px);
+    left: 150%;
+  }
+}
+@keyframes animate2 {
+  0% {
+    transform: translateY(-50px);
+    right: -25%;
+  }
+  25% {
+    transform: translateY(-0px);
+  }
+  50% {
+    transform: translateY(50px);
+  }
+  75% {
+    transform: translateY(0px);
+  }
+  100% {
+    transform: translateY(-50px);
+    right: 150%;
+  }
+}
+
+#middenkolom {
+    width: 50%;
+    height: 3000px;
+    background: #8c8c8c;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  border: 9px ;
+  border-color:#ff9900;
+  border-radius: 8px;
+
+}
+#middenkolom{
+  border: 9px solid ;
+  border-color:#ff9900;
+  border-radius: 8px;
+
+
+}
+#menu {
+  margin: 0;
+  width: auto;
+  background-color: #565656;
+  font-size: 16px;
+  font-family: Tahoma, Geneva, sans-serif;
+  font-weight: bold;
+  text-align: left;
+  padding: 8px;
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -o-border-radius: 8px;
+}
+
+#menu ul {
+  margin: 0;
+  padding: 8px 0;
+  list-style: none;
+  height: auto;
+}
+
+#menu li {
+  display: inline;
+  padding: 8px;
+}
+
+#menu a {
+  color: #FFF;
+  padding: 10px;
+  text-decoration: none;
+}
+
+#menu a:hover {
+  background-color: #1B191B;
+  color: #FFF;
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -o-border-radius: 20px;
+}
+
+#menu li .active {
+  background-color: #1B191B;
+  color: #FFF;
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -o-border-radius: 20px;
+}
+#middenkolom select {
+  color: #ff9900;
+  background-color: black;
+  margin: 10px;
+}
+#middenkolom video{
+  border: solid 5px #ff9900;
+  margin: 10px;
+}
+
+
+.left1 {
+   float: left;
+ }
+
+.right1 {
+  float: right;
+  background: black;
+  border: solid 5px #ff9900;
+  width: 300px;
+  height: 250px;
+}
+
+.block1{
+  width: 720px;
+}
+.left2 {
+  float: left;
+}
+
+.right2 {
+  float: right;
+  margin-left: 10px;
+  background: black;
+  border: solid 5px #ff9900;
+
+}
+
+.block2{
+  width: 650px;
+}
+
